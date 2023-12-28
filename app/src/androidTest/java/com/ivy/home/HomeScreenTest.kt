@@ -46,6 +46,7 @@ class HomeScreenTest: IvyAndroidTest() {
             transactions = listOf(transaction1, transaction2, transaction3)
         )
 
+        // after populating our tests and DB we use our robot reusing the functions inside it
         HomeScreenRobot(composeRule)
             .navigateTo(navigator)
             .openDateRangeSheet(timeProvider)

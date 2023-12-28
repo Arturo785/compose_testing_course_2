@@ -12,9 +12,17 @@ import com.ivy.navigation.destinations.main.Home
 import com.ivy.wallet.ui.RootActivity
 import kotlinx.coroutines.runBlocking
 
+
+// This is our robot, is basically a class that uses the compose rule as parameter,
+// with that compose rule we can make assertions, populate data and more
+// the parameter used is just a typealias
+//typealias IvyComposeRule = AndroidComposeTestRule<ActivityScenarioRule<RootActivity>, RootActivity>
 class HomeScreenRobot(
     private val composeRule: IvyComposeRule
 ) {
+
+    // all the inner functions are helpers classes and reusable
+
     fun navigateTo(navigator: Navigator): HomeScreenRobot {
         runBlocking {
             composeRule.awaitIdle()
